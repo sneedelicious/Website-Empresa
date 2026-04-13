@@ -1,4 +1,5 @@
 @media (max-width: 600px) {
+
   nav,
   article {
     width: 100%;
@@ -12,7 +13,8 @@ a:hover,
 a:active {
   text-decoration: none;
   border: none;
-  color: darkblue; /* opcional, evita mudar cor */
+  color: darkblue;
+  /* opcional, evita mudar cor */
 }
 
 /* Classe "Pai" que organiza o Título na esquerda e o Menu na direita */
@@ -65,7 +67,7 @@ section {
 article {
   padding: 20px;
   background-color: blue;
-  min-height: 63vh;
+  min-height: 40vh;
   border-radius: 8px;
   border: 2px solid black;
   margin-top: 10px;
@@ -243,4 +245,11 @@ p {
   /* desce até metade da tela */
   transform: translateY(-50%);
   /* centraliza de verdade */
+}
+
+.equipe {
+  background-color: lightyellow;
+  border: 2px solid black;
+  box-shadow: 30px 30px 30px 30px darkblue;
+  color: darkblue;
 }
