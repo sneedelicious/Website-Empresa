@@ -1,0 +1,83 @@
+<html lang="br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="topo">
+      <h1>HF Reis</h1>
+
+      <nav>
+        <button class="btn-hamburguer" onclick="toggleMenu()">☰ Menu</button>
+
+        <ul class="menu" id="menuItens">
+          <!--menu-->
+
+          <li>
+            <a href="index.html">🏠Home</a>
+          </li>
+
+          <li>
+            <a href="sobre.html">👤Sobre</a>
+          </li>
+
+          <li>
+            <a href="serviços.html">📂Serviços</a>
+          </li>
+
+          <li>
+            <a href="novidades.html">🚀Novidades</a>
+          </li>
+
+          <li>
+            <a href="#" class="ativo">✉️Fale conosco</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section>
+    <article>
+      <div class="contato">
+        <form action="mailto: #" method="post" onsubmit="return enviar();">
+          <h2>Fale conosco</h2>
+
+          <label for="i_nome">Digite seu nome:</label>
+          <input type="text" name="nome" id="i_nome" />
+
+          <label for="i_email">Digite seu e-mail:</label>
+          <input type="text" name="email" id="i_email" />
+
+          <label for="i_mensagem">Digite sua mensagem:</label>
+          <textarea name="mensagem" id="i_mensagem"></textarea>
+
+          <div class="cttbotoes">
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="alerta"></div>
+    </article>
+
+    <script src="contato.js"></script>
+  </section>
+
+  <footer>
+    <p>
+      <strong>2026 | Desenvolvido para o Trabalho de Aplicações Web - 🎓 Ciência da
+        Computação - UVA</strong>
+    </p>
+    <p><strong>📍Rio de Janeiro - RJ</strong></p>
+  </footer>
+  <script src="FunctionMenu.js"></script>
+</body>
+
+</html>

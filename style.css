@@ -1,0 +1,228 @@
+/* Classe "Pai" que organiza o Título na esquerda e o Menu na direita */
+.topo {
+  display: flex;
+  /* Ativa o alinhamento lado a lado */
+  justify-content: space-between;
+  /* Empurra o conteúdo para as extremidades */
+  align-items: center;
+  /* Centraliza o título e o botão verticalmente */
+  background-color: darkblue;
+  padding: 10px 40px;
+  /* Espaço interno: 10px em cima/baixo, 40px nas laterais */
+  border: 2px solid black;
+  border-radius: 8px;
+  min-height: 50px;
+  /* Altura mínima para o cabeçalho */
+  position: relative;
+  /* Necessário para o menu absoluto se localizar aqui */
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  /* Garante que o body tenha no mínimo a altura da tela */
+  display: flex;
+  /* Ativa o modo Flexbox */
+  flex-direction: column;
+  /* Organiza os itens (header, article, footer) em coluna */
+}
+
+header h1 {
+  margin: 0;
+  /* Remove margens padrão para não quebrar o alinhamento */
+  font-size: 52px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section {
+  flex: 1;
+}
+
+article {
+  padding: 20px;
+  background-color: blue;
+  min-height: 150px;
+  border-radius: 8px;
+  border: 2px solid black;
+  margin-top: 10px;
+  color: white;
+}
+
+footer {
+  margin-top: 10px;
+  /* Garante que o footer não cole no article em telas pequenas */
+  background-color: darkblue;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  border-radius: 8px;
+  border: 2px solid black;
+}
+
+/* =========================================
+   2. MENU HAMBÚRGUER (A LÓGICA)
+   ========================================= */
+
+/* O Botão que o usuário clica */
+.btn-hamburguer {
+  background-color: darkblue;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* A caixa que guarda os links */
+.menu {
+  display: none;
+  /* Começa escondido (O JS muda para 'flex') */
+  flex-direction: column;
+  /* Itens um embaixo do outro (vertical) */
+  list-style: none;
+  /* Tira as bolinhas da lista */
+  padding: 0;
+  margin: 0;
+  background-color: darkblue;
+  border: 2px solid white;
+  border-radius: 8px;
+  width: 200px;
+  /* Largura da caixinha do menu */
+
+  /* Posicionamento Flutuante */
+  position: absolute;
+  /* Flutua sobre o conteúdo sem empurrar nada */
+  z-index: 10;
+  /* Fica na frente de imagens e textos */
+  right: 40px;
+  /* Alinha com a direita do .topo */
+  top: 85px;
+  /* Aparece logo abaixo do botão */
+}
+
+/* Linha divisória entre cada item do menu */
+.menu li {
+  display: block;
+  /* Ocupa a largura total da caixinha */
+  border-bottom: 1px solid white;
+}
+
+/* Estilo dos Links dentro do menu */
+.menu li a {
+  display: block;
+  /* Faz o clique funcionar em toda a área do botão */
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  /* Tira o sublinhado azul de link */
+  font-weight: bold;
+}
+
+/* Efeito de destaque ao passar o mouse */
+.menu li a:hover {
+  background-color: lightyellow;
+  color: black;
+}
+
+/* Classe para destacar a página onde o usuário está */
+.ativo {
+  background-color: yellow !important;
+  color: black !important;
+}
+
+/* =========================================
+   3. ELEMENTOS EXTRAS (GALERIA E TEXTO)
+   ========================================= */
+
+p {
+  text-justify: auto;
+  line-height: 1.6;
+  /* Melhora a leitura do texto */
+}
+
+/*Pagina de Contato*/
+
+.contato {
+  /*div que tem o formulario*/
+  margin: auto;
+  background-color: darkblue;
+  width: 30%;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.contato h2 {
+  text-align: center;
+}
+
+.contato label {
+  display: block;
+  margin-top: 10px;
+}
+
+.contato input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: none;
+}
+
+.contato textarea {
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: none;
+  box-sizing: border-box;
+  resize: none;
+  /* Importante para o padding não "estourar" a largura */
+}
+
+.cttbotoes {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cttbotoes button {
+  width: 40%;
+  background-color: rgb(194, 194, 255);
+  border: 2px solid rgb(194, 194, 255);
+  border-radius: 10px;
+  padding: 4px;
+}
+
+.cttbotoes button:hover {
+  background-color: rgb(52, 52, 255);
+}
+
+#alerta {
+  display: none;
+  background-color: white;
+  color: blue;
+  width: 20%;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: xx-large;
+  text-align: center;
+
+  position: fixed;
+  /* fixa na tela */
+  right: 4%;
+  /* encosta na direita */
+  top: 50%;
+  /* desce até metade da tela */
+  transform: translateY(-50%);
+  /* centraliza de verdade */
+}

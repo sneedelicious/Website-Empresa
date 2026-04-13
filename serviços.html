@@ -1,0 +1,172 @@
+<html lang="br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Página 3</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="styleservicos.css">
+</head>
+
+<body>
+   <header>
+      <div class="topo">
+         <h1>HF Reis</h1>
+
+         <nav>
+            <button class="btn-hamburguer" onclick="toggleMenu()">☰ Menu</button>
+
+            <ul class="menu" id="menuItens"> <!--menu-->
+
+               <li>
+                  <a href="index.html">🏠Home</a>
+               </li>
+
+               <li>
+                  <a href="sobre.html">👤Sobre</a>
+               </li>
+
+               <li>
+                  <a href="#" class="ativo">📂Serviços</a>
+               </li>
+
+               <li>
+                  <a href="novidades.html">🚀Novidades</a>
+               </li>
+
+               <li>
+                  <a href="contatos.html">✉️Fale conosco</a>
+               </li>
+
+            </ul>
+         </nav>
+      </div>
+   </header>
+
+   <section>
+      <h2 align="center" style="font-size: 40px; font-weight: bold;">Nossos serviços</h2>
+      <article>
+         <h3>Encadernação de Registros
+            <button id="btn1" onclick="mostrarDescricao('desc1', 'btn1')">+</button>
+         </h3>
+         <div id="desc1" class="info">
+            <fieldset>
+               <dl>
+                  <dd>
+                     Encadernações personalizadas de livros de registros em capa dura, garantindo máxima durabilidade,
+                     resistência e organização profissional para documentos oficiais.
+                  </dd>
+               </dl>
+            </fieldset>
+
+         </div>
+
+         <h3>Restauração de Capas
+            <button id="btn2" onclick="mostrarDescricao('desc2', 'btn2')">+</button>
+         </h3>
+         <div id="desc2" class="info">
+            <fieldset>
+               <dl>
+                  <dd>
+                     Recuperação e restauração personalizada focada exclusivamente nas capas de livros manuscritos.
+                     Devolvemos a estética original e a proteção externa sem interferir na integridade das folhas.
+                  </dd>
+               </dl>
+            </fieldset>
+         </div>
+
+         <h3>Indexação Inteligente com IA Local (Ollama)
+            <button id="btn3" onclick="mostrarDescricao('desc3', 'btn3')">+</button>
+         </h3>
+         <div id="desc3" class="info">
+            <fieldset>
+               <dl>
+                  <dd>
+                     Implementação de IA para catalogação automatizada de dados sensíveis. Desenvolvemos um sistema de
+                     indexação que utiliza modelos avançados de linguagem processados localmente. Segurança Máxima: Os
+                     dados nunca saem da infraestrutura do cartório para a nuvem, garantindo conformidade total com a
+                     LGPD e sigilo absoluto.
+                  </dd>
+               </dl>
+            </fieldset>
+         </div>
+
+         <h3>Digitalização de Alta Performance (CZUR Pro)
+            <button id="btn4" onclick="mostrarDescricao('desc4', 'btn4')">+</button>
+         </h3>
+         <div id="desc4" class="info">
+            <fieldset>
+               <dl>
+                  <dd>
+                     Utilizamos scanners profissionais CZUR Pro, equipados com tecnologia de achatamento de curva a
+                     laser. Isso permite digitalizar livros de registro sem forçar a lombada ou danificar as folhas,
+                     gerando arquivos em alta resolução com o máximo de cuidado com o material original.
+                  </dd>
+               </dl>
+            </fieldset>
+         </div>
+
+         <section class="antes-depois-container">
+            <h2>Nosso Trabalho na Prática</h2>
+
+            <div class="antes-depois-flex">
+               <article class="card-antes-depois">
+                  <img src="midias/antes1.jpeg"
+                     alt="Livro de registro B-57 danificado, com capa destruída e lombada desfeita.">
+                  <h3>Antes: Estado de Deterioração</h3>
+                  <p style="color: black;">Um livro de registro histórico em estado crítico, com a integridade física
+                     comprometida pelo tempo e manuseio.</p>
+               </article>
+
+               <article class="card-antes-depois">
+                  <img src="midias/depois1.jpeg"
+                     alt="Livro de registro restaurado com capa dura preta de tecido e letras brancas 'B' e '99' na lombada.">
+                  <h3>Depois: Restauração Profissional</h3>
+                  <p style="color: black;">O mesmo livro, totalmente restaurado com nossa encadernação de capa dura em
+                     tecido, garantindo proteção e durabilidade.</p>
+               </article>
+            </div>
+         </section>
+
+         <section class="antes-depois-container"></section>
+         <div class="antes-depois-flex">
+            <article class="card-antes-depois">
+               <img src="midias/antes2.jpeg" alt="Livro danificado.">
+               <h3>Antes: Estado de Deterioração</h3>
+            </article>
+
+            <article class="card-antes-depois">
+               <img src="midias/depois2.jpeg" alt="Livro restaurado.">
+               <h3>Depois: Restauração Profissional</h3>
+            </article>
+         </div>
+   </section>
+
+   </section>
+
+   <footer>
+      <p><strong>2026 | Desenvolvido para o Trabalho de Aplicações Web - 🎓 Ciência da Computação - UVA</strong></p>
+      <p><strong>📍Rio de Janeiro - RJ</strong></p>
+   </footer>
+
+   <script src="FunctionMenu.js"></script>
+   <script>
+
+      function mostrarDescricao(idDaDiv, idDoBotao) {
+         // Pegamos a div pelo ID (igual feito com n1 e n2 em exercicio de aula)
+         let div = document.getElementById(idDaDiv);
+         let botao = document.getElementById(idDoBotao);
+
+         // Lógica: Se estiver escondido, mostra. Se estiver aparecendo, esconde.
+         if (div.style.display === "none") {
+            div.style.display = "block";
+            botao.innerHTML = "-"; // Muda o + para - quando abre
+         } else {
+            div.style.display = "none";
+            botao.innerHTML = "+"; // Volta para + quando fecha
+         }
+      }
+   </script>
+</body>
+
+</html>

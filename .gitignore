@@ -1,0 +1,17 @@
+# Configurações do VS Code (evita que suas cores/atalhos apareçam pros amigos)
+.vscode/
+
+# Arquivos inúteis que o Windows cria em pastas com imagens
+Thumbs.db
+desktop.ini
+
+# Arquivos temporários do Mac (caso algum amigo use Apple)
+.DS_Store
+
+# Pastas de dependências (caso decidam usar ferramentas como Sass ou Tailwind depois)
+node_modules/
+dist/
+build/
+
+# Arquivos de log (registros de erro que não precisam subir)
+*.log

@@ -1,0 +1,100 @@
+<html lang="br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Página 4</title>
+   <link rel="stylesheet" href="style.css">
+   <style>
+      * {
+         font-size: 18px;
+      }
+   </style>
+</head>
+
+<body>
+   <header>
+      <div class="topo">
+         <h1>HF Reis</h1>
+
+         <nav>
+            <button class="btn-hamburguer" onclick="toggleMenu()">☰ Menu</button>
+
+            <ul class="menu" id="menuItens"> <!--menu-->
+
+               <li>
+                  <a href="index.html">🏠Home</a>
+               </li>
+
+               <li>
+                  <a href="sobre.html">👤Sobre</a>
+               </li>
+
+               <li>
+                  <a href="serviços.html">📂Serviços</a>
+               </li>
+
+               <li>
+                  <a href="#" class="ativo">🚀Novidades</a>
+               </li>
+
+               <li>
+                  <a href="contatos.html">✉️Fale conosco</a>
+               </li>
+
+            </ul>
+         </nav>
+      </div>
+   </header>
+
+   <section>
+      <h2 align="center" style="font-size: 40px; font-weight: bold;">🚀Novidades🚀</h2>
+
+      <article>
+         <p>
+         <h3>Nova Ferramenta Exclusiva: Processamento Inteligente de Documentos</h3>
+         </p>
+         Para elevar o nível de precisão na organização de arquivos, a HF Reis agora utiliza um software proprietário
+         desenvolvido especificamente para transformar grandes volumes de PDF em dados estratégicos. Diferente de
+         soluções comuns, nossa ferramenta foca em agilidade e privacidade, utilizando tecnologia de ponta processada
+         localmente.<br>
+         <p>
+         <h3>Como o Software Funciona (As 4 Pilastras):</h3>
+         </p>
+         1º Configuração Personalizada (Ollama + Gemma 3): O sistema utiliza o provedor Ollama rodando o modelo Gemma
+         3:4b, garantindo que a inteligência artificial processe as informações sem que os dados saiam do nosso
+         servidor. Ajustamos o tamanho das chunks e o modelo de chat para cada tipo de cliente, garantindo a melhor
+         captura de contexto.<br>
+         2º Divisão Inteligente por Páginas: Para otimizar o tempo e evitar processos demorados de OCR, o software
+         possui uma função de Fragmentação de PDF. Ele separa automaticamente um livro ou arquivo longo em documentos
+         individuais por página. Isso permite um processamento paralelo muito mais rápido e organizado.<br>
+         3º Extração de Dados via IA (RAG & Embeddings): Através da tecnologia de embedding nomic-embed-text:v1.5, o
+         sistema "entende" o conteúdo de cada página. Na aba de perguntas de processamento, definimos exatamente quais
+         informações a IA deve coletar (nomes, datas, valores ou cláusulas), criando um cérebro digital focado nas suas
+         necessidades.<br>
+         4º Processamento em Lote e Indexação CSV: A última etapa é a automação total. O software lê pastas inteiras de
+         PDFs pesquisáveis e gera, automaticamente, uma planilha CSV (Excel) com todos os dados indexados. O resultado é
+         um índice perfeito, pronto para ser importado para qualquer sistema de gestão, eliminando erros de digitação
+         humana.<br>
+
+         <p>
+         <h3>Curiosidades🤔</h3>
+         </p>
+         1º O que é Ollama? é uma plataforma que permite rodar IAs poderosas no próprio computador (Local).<br>
+         2º O que é CSV? É um formato universal que abre no Excel, facilitando a vida do cliente.<br>
+         3º O que é Gemma 3? É um modelo de IA de última geração desenvolvido pelo Google, mas que roda de forma privada
+         no seu software.
+
+      </article>
+
+   </section>
+
+   <footer>
+      <p><strong>2026 | Desenvolvido para o Trabalho de Aplicações Web - 🎓 Ciência da Computação - UVA</strong></p>
+      <p><strong>📍Rio de Janeiro - RJ</strong></p>
+   </footer>
+
+   <script src="FunctionMenu.js"></script>
+</body>
+
+</html>
