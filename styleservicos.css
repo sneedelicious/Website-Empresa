@@ -1,58 +1,66 @@
+@media (max-width: 600px) {
+  nav,
+  article {
+    width: 100%;
+    height: auto;
+  }
+}
+
 .info {
-    display: none;
-    padding: 10px;
-    border-left: 3px solid yellow;
+  display: none;
+  padding: 10px;
+  border-left: 3px solid yellow;
 }
 
 fieldset {
-    padding: 10px 40px;
-    /* Espaço interno: 10px em cima/baixo, 40px nas laterais */
-    border: 2px solid black;
-    background-color: lightyellow;
-    color: black;
-    border-radius: 8px;
+  padding: 10px 40px;
+  /* Espaço interno: 10px em cima/baixo, 40px nas laterais */
+  border: 2px solid black;
+  background-color: lightyellow;
+  color: black;
+  border-radius: 8px;
 }
 
 .antes-depois-container h2 {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
-    display: block;
-    /* Garante que ele ocupe a linha toda */
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  display: block;
+  /* Garante que ele ocupe a linha toda */
 }
 
 .antes-depois-flex {
-    display: flex;
-    justify-content: space-around;
-    /* Dá um espaço entre os cards */
-    gap: 50px;
-    margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  /* Dá um espaço entre os cards */
+  gap: 50px;
+  margin-top: 30px;
 }
 
 .card-antes-depois {
-    flex: 0 1 400px;
-    /* Tenta ocupar 400px, mas encolhe se precisar */
-    background-color: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px yellow;
-    color: black;
-    /* Texto interno do card em preto para ler no branco */
+  flex: 0 1 400px;
+  /* Tenta ocupar 400px, mas encolhe se precisar */
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px yellow;
+  color: black;
+  /* Texto interno do card em preto para ler no branco */
 }
 
 .card-antes-depois img {
-    width: 100%;
-    /* Faz a imagem preencher a largura do card branco */
-    max-width: 100%;
-    height: 400px;
-    /* Altura fixa para manter o padrão */
-    object-fit: cover;
-    /* Não deixa a imagem esticar/achatar */
-    border-radius: 4px;
-    margin-bottom: 15px;
+  width: 100%;
+  /* Faz a imagem preencher a largura do card branco */
+  max-width: 100%;
+  height: 400px;
+  /* Altura fixa para manter o padrão */
+  object-fit: cover;
+  /* Não deixa a imagem esticar/achatar */
+  border-radius: 4px;
+  margin-bottom: 15px;
 }
 
 /* Um toque de cor para os títulos dentro do fundo branco do card */
 .card-antes-depois h3 {
-    color: darkblue;
+  color: darkblue;
 }
