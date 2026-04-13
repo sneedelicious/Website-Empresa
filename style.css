@@ -7,10 +7,7 @@
   }
 }
 
-.hf a,
-a:visited,
-a:hover,
-a:active {
+.hf a, a:visited, a:hover, a:active {
   text-decoration: none;
   border: none;
   color: darkblue;
@@ -168,18 +165,26 @@ p {
 }
 
 /*Pagina de Contato*/
+.container{
+  min-height: 74vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .contato {
   /*div que tem o formulario*/
   margin: auto;
   background-color: darkblue;
-  width: 30%;
+  width: 50vh;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 0px 0px 5px black;
+
 }
 
-.contato h2 {
+.contato h1 {
   text-align: center;
 }
 
@@ -237,7 +242,7 @@ p {
   font-size: xx-large;
   text-align: center;
 
-  position: fixed;
+  position: absolute;
   /* fixa na tela */
   right: 4%;
   /* encosta na direita */
@@ -247,6 +252,8 @@ p {
   /* centraliza de verdade */
 }
 
+
+/*Equipe de desenvolvimento*/
 .equipe {
   background-color: lightyellow;
   border: 2px solid black;
